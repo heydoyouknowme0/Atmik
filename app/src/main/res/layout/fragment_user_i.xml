@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UserIFragment">
+
+
+    <TextView
+        android:id="@+id/nameText"
+        style="@style/CommonTextView"
+        android:layout_marginTop="0dp"
+        android:text="@string/hey_i_am"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        style="@style/CommonEditText"
+        android:id="@+id/nameEdit"
+        android:background="@drawable/my_edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/nameText"
+        android:labelFor="@+id/nameText"
+        android:inputType="textAutoComplete"
+        android:autofillHints="name"/>
+
+    <TextView
+        style="@style/CommonTextView"
+        android:id="@+id/nicknameText"
+        android:text="@string/friends_call_me"
+        app:layout_constraintTop_toBottomOf="@+id/nameEdit" />
+
+    <EditText
+        style="@style/CommonEditText"
+        android:id="@+id/nicknameEdit"
+        android:background="@drawable/my_edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/nicknameText"
+        android:labelFor="@+id/nicknameEdit"
+        android:inputType="textAutoComplete"
+        android:autofillHints="username" />
+    <TextView
+        style="@style/CommonTextView"
+        android:id="@+id/birthDate"
+        android:text="@string/birth_date"
+        app:layout_constraintTop_toBottomOf="@+id/nicknameEdit" />
+
+    <EditText
+        style="@style/CommonEditText"
+        android:background="@drawable/my_edittext_bg"
+        android:id="@+id/birthEdit"
+        app:layout_constraintTop_toBottomOf="@+id/birthDate"
+        android:labelFor="@+id/birthDate"
+        android:inputType="date"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
+    <TextView
+        style="@style/CommonTextView"
+        android:id="@+id/numberText"
+        android:text="@string/call_me_on"
+        app:layout_constraintTop_toBottomOf="@+id/birthEdit" />
+
+    <EditText
+        style="@style/CommonEditText"
+        android:id="@+id/numberEdit"
+        android:background="@drawable/my_edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/numberText"
+        android:labelFor="@+id/numberText"
+        android:inputType="phone"
+        android:autofillHints="phone"/>
+
+    <Button
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
