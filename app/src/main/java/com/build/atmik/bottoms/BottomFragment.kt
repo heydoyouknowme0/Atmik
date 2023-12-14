@@ -3,17 +3,12 @@
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 
 
- /**
- * A simple [Fragment] subclass.
- * Use the [BottomFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class BottomFragment : Fragment(R.layout.fragment_bottom) {
      private lateinit var buttonCreate: Button
 

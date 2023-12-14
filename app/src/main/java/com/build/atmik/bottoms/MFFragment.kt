@@ -12,12 +12,6 @@ import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 import com.build.atmik.tops.FaceFragment
 
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MFFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MFFragment : Fragment(R.layout.fragment_mf) {
     private var imageIndex = 1
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

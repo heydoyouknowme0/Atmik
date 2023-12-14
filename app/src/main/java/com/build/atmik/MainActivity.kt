@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.PixelFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Nickname
 import android.util.Log
 import androidx.fragment.app.FragmentManager
 import com.build.atmik.bottoms.SelectFragment
@@ -21,11 +20,10 @@ class MainActivity : AppCompatActivity() {
         if (sharedPreferences.getInt("gender", -1)==-1) {
             setContentView(R.layout.activity_main)
         }else if(sharedPreferences.getString("name", "").isNullOrBlank()){
-            var gender=sharedPreferences.getInt("gender", 1)
+            val gender=sharedPreferences.getInt("gender", 1)
             setContentView(R.layout.activity_main)
             val nextFragmentTop = FaceFragment.newInstance(gender+gender*3)
             val nextFragment= UserIFragment()
-            gender=1
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.top, nextFragmentTop,"faceFragment")
             transaction.replace(R.id.bottom, nextFragment)

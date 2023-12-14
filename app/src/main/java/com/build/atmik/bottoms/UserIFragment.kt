@@ -4,13 +4,11 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.fragment.app.FragmentManager
 import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 import com.build.atmik.tops.FaceFragment

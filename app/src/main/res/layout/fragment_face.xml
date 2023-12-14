@@ -30,7 +30,7 @@
 
         <View
             android:layout_width="250sp"
-            android:layout_height="1sp"
+            android:layout_height="1dp"
             android:id="@+id/customizeProfileLine"
             android:layout_below="@id/customizeProfile"
             android:background="@android:color/black"

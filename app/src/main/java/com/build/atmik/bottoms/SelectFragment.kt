@@ -70,12 +70,11 @@ class SelectFragment : Fragment(R.layout.fragment_select) {
             setIcon(requireContext(),preferredPosition)
         }
         prevButton.setOnClickListener{
-            val faceFragment= parentFragmentManager.findFragmentByTag("faceFragment") as FaceFragment?
             faceFragment?.profile(0)
             parentFragmentManager.popBackStack()
         }
     }
-    fun setIcon(context: Context,option:Int){
+    private fun setIcon(context: Context, option:Int){
         val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("costume", option)

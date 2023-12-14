@@ -20,4 +20,5 @@
     <string name="enter_nickname_error">Please enter a nickname.</string>
     <string name="enter_birthdate_error">Please enter your birthdate.</string>
     <string name="enter_phone_error">Please enter a valid phone number.</string>
+    <string name="outfits">Outfits</string>
 </resources>
