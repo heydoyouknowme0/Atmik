@@ -1,0 +1,40 @@
+<!-- res/font/font_family.xml -->
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!-- Regular Calibri -->
+    <font
+        app:font="@font/calibri_regular"
+        app:fontWeight="400"
+        app:fontStyle="normal" />
+
+    <!-- Bold Calibri -->
+    <font
+        app:font="@font/calibri_bold"
+        app:fontWeight="700"
+        app:fontStyle="normal" />
+
+    <!-- Italic Calibri -->
+    <font
+        app:font="@font/calibri_italic"
+        app:fontWeight="400"
+        app:fontStyle="italic" />
+
+    <!-- Bold Italic Calibri -->
+    <font
+        app:font="@font/calibri_bold_italic"
+        app:fontWeight="700"
+        app:fontStyle="italic" />
+
+    <!-- Light Calibri -->
+    <font
+        app:font="@font/calibri_light"
+        app:fontWeight="300"
+        app:fontStyle="normal" />
+
+    <!-- Light Italic Calibri -->
+    <font
+        app:font="@font/calibri_light_italic"
+        app:fontWeight="300"
+        app:fontStyle="italic" />
+
+</font-family>

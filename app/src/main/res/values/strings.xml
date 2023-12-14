@@ -4,12 +4,20 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="male_select">male select</string>
+    <string name="female_select">female select</string>
     <string name="right_arrow"><![CDATA[>]]></string>
     <string name="left_arrow"><![CDATA[<]]></string>
-    <string name="next">Next</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
     <string name="hey_i_am">Hey! I am.</string>
     <string name="friends_call_me">Friends call me</string>
     <string name="birth_date">BIRTH- DATE</string>
     <string name="call_me_on">Call me on</string>
     <string name="face">face</string>
+    <string name="customize_profile">Customize Profile</string>
+    <string name="select_costume">select costume</string>
+    <string name="enter_name_error">Please enter your name.</string>
+    <string name="enter_nickname_error">Please enter a nickname.</string>
+    <string name="enter_birthdate_error">Please enter your birthdate.</string>
+    <string name="enter_phone_error">Please enter a valid phone number.</string>
 </resources>

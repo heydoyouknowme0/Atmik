@@ -8,14 +8,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.45"
-        android:name="com.build.atmik.TopFragment"
+        android:name="com.build.atmik.tops.TopFragment"
         android:id="@+id/top"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.55"
-        android:name="com.build.atmik.BottomFragment"
+        android:name="com.build.atmik.bottoms.BottomFragment"
         android:id="@+id/bottom"
         />
 </LinearLayout>
