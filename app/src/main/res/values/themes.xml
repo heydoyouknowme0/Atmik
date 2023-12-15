@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Atmik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Atmik" parent="Theme.Material3.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="android:fontFamily">@font/calibri</item>
         <item name="fontFamily">@font/calibri</item>

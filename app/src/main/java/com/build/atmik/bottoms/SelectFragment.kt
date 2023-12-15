@@ -1,6 +1,7 @@
 package com.build.atmik.bottoms
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import com.build.atmik.MainActivity
 import com.build.atmik.R
 import com.build.atmik.tops.FaceFragment
 
@@ -59,8 +62,8 @@ class SelectFragment : Fragment(R.layout.fragment_select) {
                 val imageView = convertView as? ImageView ?: LayoutInflater.from(context).inflate(R.layout.grid_item, parent, false) as ImageView
                 imageView.setImageResource(imageIds[position])
                 imageView.setOnClickListener {
-                    faceFragment?.updateImage(position)
                     preferredPosition=position
+                    faceFragment?.updateImage(preferredPosition)
                 }
                 return imageView
             }
@@ -68,6 +71,7 @@ class SelectFragment : Fragment(R.layout.fragment_select) {
         }
         nextButton.setOnClickListener{
             setIcon(requireContext(),preferredPosition)
+            (requireActivity() as MainActivity).clearBacks()
         }
         prevButton.setOnClickListener{
             faceFragment?.profile(0)
@@ -75,6 +79,7 @@ class SelectFragment : Fragment(R.layout.fragment_select) {
         }
     }
     private fun setIcon(context: Context, option:Int){
+        Log.d("TAG", option.toString())
         val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putInt("costume", option)

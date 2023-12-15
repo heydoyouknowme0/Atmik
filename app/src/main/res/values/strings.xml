@@ -21,4 +21,19 @@
     <string name="enter_birthdate_error">Please enter your birthdate.</string>
     <string name="enter_phone_error">Please enter a valid phone number.</string>
     <string name="outfits">Outfits</string>
+    <string name="search">search</string>
+    <string name="new_entry">new entry</string>
+    <string name="new_journal">new journal</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="new_journal_s_name">New Journal\'s Name</string>
+    <string name="create">Create</string>
+    <string name="close">Close</string>
 </resources>

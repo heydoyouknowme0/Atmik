@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 import com.build.atmik.tops.FaceFragment
 import java.util.Calendar
@@ -53,7 +52,7 @@ class UserIFragment : Fragment(R.layout.fragment_user_i) {
             val birthDate = dateEdt.text.toString().trim()
             val phoneNumber = numberEdit.text.toString().trim()
 
-            AnimationUtility.applyFillAnimation(it,requireContext())
+
             if(!validateInputs(name,nickname,birthDate,phoneNumber)){
                 return@setOnClickListener
             }else{

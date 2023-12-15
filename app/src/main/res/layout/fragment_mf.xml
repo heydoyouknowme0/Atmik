@@ -63,7 +63,7 @@
 
     </ViewFlipper>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         style="@style/MyButton"
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"

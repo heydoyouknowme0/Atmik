@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="MyButton">
-        <item name="android:background">@drawable/my_button_bg</item>
-        <item name="backgroundTint">@null</item>
+    <style name="MyButton" parent="Widget.Material3.Button.OutlinedButton">
         <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="rippleColor">@color/white</item>
     </style>
     <style name="CommonTextView">
         <item name="android:layout_width">wrap_content</item>
@@ -14,8 +15,13 @@
         <item name="layout_constraintHorizontal_bias">0</item>
         <item name="android:layout_marginTop">24dp</item>
     </style>
-
-    <style name="CommonEditText">
+    <style name="TextAppearance.MyApp.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        ...
+        <item name="fontFamily">@font/melinda_f</item>
+        <item name="android:textSize">120sp</item>
+        ...
+    </style>
+    <style name="CommonEditText" >
         <item name="android:layout_width">230sp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">45dp</item>
@@ -23,5 +29,8 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintEnd_toEndOf">parent</item>
         <item name="layout_constraintHorizontal_bias">0</item>
+    </style>
+    <style name="IconButton" parent="Widget.Material3.Button.IconButton">
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

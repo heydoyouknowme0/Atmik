@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.build.atmik.MainActivity
 import com.build.atmik.R
+import com.build.atmik.data.DrawableProvider.drawables
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +25,7 @@ private const val ARG_PARAM1 = "param1"
 class FaceFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: Int = 0
-    private val drawables: List<Int> = listOf(R.drawable.f1,R.drawable.f2,R.drawable.f3,R.drawable.f4, R.drawable.m1,R.drawable.m2,R.drawable.m3,R.drawable.m4)
+
     private var customizeProfile: TextView? = null
     private var customizeProfileLine: View? = null
     private var category: TextView? = null

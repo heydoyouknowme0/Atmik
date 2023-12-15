@@ -8,7 +8,6 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.ViewFlipper
-import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 import com.build.atmik.tops.FaceFragment
 
@@ -40,7 +39,6 @@ class MFFragment : Fragment(R.layout.fragment_mf) {
             imageIndex = (imageIndex - 1 + imageChange.childCount) % imageChange.childCount
         }
         nextButton.setOnClickListener{
-            AnimationUtility.applyFillAnimation(it,requireContext())
             setGender(requireContext(), imageIndex )
             val nextFragmentTop = FaceFragment.newInstance(imageIndex+imageIndex*3)
             val nextFragment= UserIFragment()

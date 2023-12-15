@@ -2,13 +2,18 @@ package com.build.atmik
 
 import android.content.Context
 import android.graphics.PixelFormat
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.FragmentManager
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import com.build.atmik.bottoms.SelectFragment
 
 import com.build.atmik.bottoms.UserIFragment
+
+import com.build.atmik.data.DrawableProvider
+
 import com.build.atmik.tops.FaceFragment
 
 // Example: MainActivity.kt
@@ -16,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+
         window.setFormat(PixelFormat.RGBA_8888)
         if (sharedPreferences.getInt("gender", -1)==-1) {
             setContentView(R.layout.activity_main)
@@ -47,14 +53,17 @@ class MainActivity : AppCompatActivity() {
             transaction.addToBackStack(null)
             transaction.commit()
         }else{
-            setContentView(R.layout.activity_main_init)
+            clearBacks()
         }
     }
 
 
-    fun clearBack(){
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+    fun clearBacks(){
+        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         setContentView(R.layout.activity_main_init)
+        val avatar=findViewById<ImageView>(R.id.avatar)
+        val drawable: Drawable? = ContextCompat.getDrawable(this, DrawableProvider.drawables[sharedPreferences.getInt("gender",1)+sharedPreferences.getInt("costume",0)])
+        avatar.setImageDrawable(drawable)
     }
 
 }

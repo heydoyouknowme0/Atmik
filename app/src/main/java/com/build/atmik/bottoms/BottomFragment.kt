@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
-import com.build.atmik.AnimationUtility
 import com.build.atmik.R
 
 
@@ -17,7 +16,6 @@ class BottomFragment : Fragment(R.layout.fragment_bottom) {
 
         buttonCreate = view.findViewById(R.id.btn)
         buttonCreate.setOnClickListener {
-            AnimationUtility.applyFillAnimation(it,requireContext())
             val nextFragment = MFFragment()
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.bottom, nextFragment)
