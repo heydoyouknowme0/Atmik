@@ -23,10 +23,8 @@ interface EntryDao {
     @Insert
     suspend fun insert(entry: Entry)
 
-
-
     @Query("SELECT * FROM entries WHERE id=:id LIMIT 1")
-    suspend fun getEntryInformation(id: Long): Entry
+    fun getEntryInformation(id: Long): LiveData<Entry>
 
     @Query("DELETE FROM entries WHERE id = :id")
     suspend fun deleteById(id: Long)
@@ -35,8 +33,9 @@ interface EntryDao {
     suspend fun updateData(id: Long,data:String)
     @Query("UPDATE entries SET entryName=:name WHERE id= :id")
     suspend fun updateName(id: Long,name:String)
-
-
     @Query("SELECT id,journalId,time,entryName FROM entries WHERE journalId = :journalId")
     fun getEntriesForJournal(journalId: Long): LiveData<List<Entry>>
+
+    @Query("SELECT id,journalId,time,entryName FROM entries")
+    fun getEntries(): LiveData<List<Entry>>
 }

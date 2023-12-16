@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import java.util.Date
 
 class ViewModel(application: Application) : AndroidViewModel(application) {
-    private val getAllJournals: LiveData<List<Journal>>
+    val getAllJournals: LiveData<List<Journal>>
     private val repository: DatabaseRepository
 
     init {
@@ -20,12 +20,33 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         repository= DatabaseRepository(entryDao,journalDao)
         getAllJournals=repository.getAllJournals
     }
+    fun getEntriesForJournal(journalId: Long): LiveData<List<Entry>> {
+        return repository.getEntriesForJournal(journalId)
+    }
+    fun getData(id: Long):LiveData<Entry>{
+        return repository.getData(id)
+    }
     fun addJournal(journal: Journal){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addJournal(journal)
         }
     }
 
+    fun addEntry(entry: Entry){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.addEntry(entry)
+        }
+    }
+    fun deleteByIdj(id: Long){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deletebyIdj(id)
+        }
+    }
+    fun updateEntry(id: Long,data: String){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.update(id,data)
+        }
+    }
 
 }
 

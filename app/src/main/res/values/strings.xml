@@ -36,4 +36,6 @@
     <string name="new_journal_s_name">New Journal\'s Name</string>
     <string name="create">Create</string>
     <string name="close">Close</string>
+    <string name="new_entry_name">New Entry Name</string>
+    <string name="undo">undo</string>
 </resources>
