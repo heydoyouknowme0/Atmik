@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="male_array">
+        <item>@drawable/m1</item>
+        <item>@drawable/m2</item>
+        <item>@drawable/m3</item>
+        <item>@drawable/m4</item>
+    </integer-array>
+    <integer-array name="female_array">
+        <item>@drawable/f1</item>
+        <item>@drawable/f2</item>
+        <item>@drawable/f3</item>
+        <item>@drawable/f4</item>
+    </integer-array>
+</resources>
